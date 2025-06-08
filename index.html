@@ -34,10 +34,9 @@
       height: 100%;
       border: none;
     }
-    iframe.weather {
-      width: 100%;
-      height: 120px;
-      border: none;
+    .weatherwidget-io {
+      width: 100% !important;
+      min-height: 140px;
     }
   </style>
 </head>
@@ -52,15 +51,28 @@
       </div>
     </div>
     <div>
-      <iframe class="weather" src="https://forecast7.com/en/28d80n81d73/tavares/?unit=us" frameborder="0" scrolling="no"></iframe>
+      <a class="weatherwidget-io" href="https://forecast7.com/en/28d80n81d73/tavares/" data-label_1="TAVARES" data-label_2="WEATHER" data-theme="original">TAVARES WEATHER</a>
     </div>
   </div>
+
   <div class="main">
     <iframe class="video"
-      src="https://www.youtube.com/embed/-seAKX7enT4?autoplay=1&mute=1&loop=1&playlist=-seAKX7enT4"
+      src="https://www.youtube.com/embed/7pI1JDLTO-M?autoplay=1&mute=1&loop=1&playlist=7pI1JDLTO-M"
       allow="autoplay; fullscreen"
       allowfullscreen>
     </iframe>
   </div>
+
+  <script>
+    !function(d,s,id){
+      var js,fjs=d.getElementsByTagName(s)[0];
+      if(!d.getElementById(id)){
+        js=d.createElement(s);
+        js.id=id;
+        js.src='https://weatherwidget.io/js/widget.min.js';
+        fjs.parentNode.insertBefore(js,fjs);
+      }
+    }(document,'script','weatherwidget-io-js');
+  </script>
 </body>
 </html>
